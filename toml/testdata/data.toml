@@ -1,0 +1,59 @@
+# This is the tmplgen data file
+# See more about TOML files here:
+#
+#     * https://github.com/toml-lang/toml
+#     * https://goo.gl/CEGc3C
+
+[[Layouts]]
+# This it the default layout
+path = "page/"
+Filename = "main.html"
+
+[[Layouts]]
+# This layout will be used for pages that has prefix: page/error/
+path = "page/error/"
+Filename = "error.html"
+
+
+# Usage:
+#
+# {{ .String.Title }}     =>     tmplgen
+#
+# key/value added under [String] is accessible inside
+# your HTML templates.
+#
+# Add your own string values here:
+[String]
+Title = "tmplgen"
+Key2 = "value2"
+
+
+
+
+
+# Usage:
+#
+# <ul>
+# {{- range .Array.Users }}
+#    <li>
+#        {{ .FirstName }}
+#        {{ .LastName }}
+#        {{ .Email }}
+#    </li>
+# {{- end }}
+# </ul>
+# Add your own Data arrays here:
+[[Array.Users]]
+    FirstName = "Anders"
+    LastName = "Törnqvist"
+    Email = "unders@home.com"
+
+[[Array.Users]]
+    FirstName = "Anders2"
+    LastName = "Törnqvist2"
+    Email = "unders2@home.com"
+
+[[Array.Events]]
+    Name = "Event 1"
+[[Array.Events]]
+    Name = "Event 2"
