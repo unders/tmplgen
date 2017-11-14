@@ -136,6 +136,7 @@ func (p Pager) render(file string) {
 	destFile := path.Join(p.destDir, filename)
 	if err := os.MkdirAll(path.Dir(destFile), os.ModePerm); err != nil {
 		fmt.Printf("could not create dir %s, error: %s\n", path.Dir(destFile), err)
+		return
 	}
 	if err := ioutil.WriteFile(destFile, b, os.ModePerm); err != nil {
 		fmt.Printf("write %s error: %s [ layout %s, file: %s ]\n", destFile, err, layout, filename)
