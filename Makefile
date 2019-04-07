@@ -10,7 +10,7 @@ setup: ## installs dependencies
 
 .PHONY: install
 install: ## installs tmplgen
-	go install github.com/unders/tmplsrv
+	go install github.com/unders/tmplgen
 
 .PHONY: start
 start: ## starts development environment for tmplserv
