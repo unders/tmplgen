@@ -14,7 +14,7 @@ See [releases](https://github.com/unders/tmplgen/releases)
 
 **OSX binary download**
 ```
-curl -L https://github.com/unders/tmplgen/releases/download/v1.0.0/tmplgen_1.0.1_darwin_amd64.tar.gz | tar -zxv
+curl -L https://github.com/unders/tmplgen/releases/download/v1.0.0/tmplgen_1.0.0_darwin_amd64.tar.gz | tar -zxv
 ```
 
 ### Developer
